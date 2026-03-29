@@ -13,6 +13,7 @@ Dans la résolution par défaut de Godot, notre joueur ferait cette taille :
 
 .. image::img/contreExempleResolution.png
 
+
 **Ce que vous conviendrait est un peu petit*.
 
 Pour changer la résolution dans Godot, il suffit d'aller la modifier dans les paramètres du projet. Vous pouvez donc cliquez en haut à gauche sur ``Project`` puis sur projet settings.
@@ -23,7 +24,18 @@ Vous allez voir une fenêtre qui ressemble à ça. Ne vous inquiétez pas, même
 Les paramètres de résolutions se situent dans l'onglet ``Window``.
 
 
+.. image::changerResolution1.png
 
+Dans l'onglet window modifier le viewport width à 480, le wiewport height à 270 (on aura donc une résolution 480 par 270 !) et e Mode à ``Fullscreen`` pour que le jeu s'ouvre automatiquement en pleine écran.
+
+.. image::changerResolution2.png
+
+La dernière petite option qu'on va modifier c'est le stretch mode qui va permettre à notre petit jeu de résolution 480 par 270 de recouvrir tout l'écran.
+Pour trouver le Stretch Mode, il suffit de descendre un peu plus bas dans l'onglet Window dans la partie ``Strech `` où on peut voir une option ``Mode``. On va choisir l'option ``Viewport``.
+
+.. image::changerResolution3.png
+
+Maintenant qu'on a mis en place tout cela, on peut quitter les paramètres du projet et 
 Pour ce faire, on va commencer par créer une nouvelle scène qui sera notre `Monde`.
 Cliquez sur **Scene -> New Scene** en haut à droite, ou sur le petit **+** en haut à côté de l'onglet de la scène ``player``, ou appuyez sur ``Ctrl+N``.
 Une nouvelle scène vierge devrait s'ouvir:
@@ -36,7 +48,10 @@ Une nouvelle scène vierge devrait s'ouvir:
 Ici, nous allons créer un ``Control Node``, c'est un type de Node qui permet de gérer la disposition de ses enfants sur l'écran. Pour ça, appuyez à nouveau sur le **+** et rechercher la node ``Control`` ou plus directement sur le boutton  ``User Interface`` dans la hiérarchie (en haut à gauche).
 Vous pouvez renommer ce noeud en ``"World"``, et lui ajouter deux noeuds ``TextureRect`` en enfant.
 
-Pour chacun d'entre eux, vous allez cliquer en haut 
+Vous pouvez cliquer sur chacun d'entre eux pour afficher leur propriété dans l'inspecteur à gauche. Nous allons ajouter dans leur propriété ``Texture`` les images disponibles dans Backround, respectivement ``back.png`` and ``middle.png``. 
+Vous pouvez les ``load`` en cliquant sur la petite flèche à côté de la propriété texture ou bien directement les glisser depuis les dossiers en bas à gauche.
+
+.. image:: img/loadTexture.png
 
 .. warning::
   Depuis la version 4.3 de Godot, le nœud ``TileMap``, qui était jusque là utilisé, n'est plus d'actualité!
@@ -68,15 +83,9 @@ Cliquez sur l'onglet **TileSet**:
 
 Appuyez sur le bouton **+** **[1]**, cliquez sur **Atlas**, puis séléctionnez le fichier ``assets/tilemap/Tilemap_Flat.png``.
 Godot va alors vous demander si vous voulez créer automatiquement des tiles dans l'Atlas.
-Séléctionnez oui, et vous verrez une grille découper l'image en blocs de 16px par 16px.
+Séléctionnez oui, et vous verrez une grille découper l'image en blocs de 16px par 16px, ce qui est parfait pour nos cases à nous (mais il faudrait changer )
 Cependant, nous voulons des cases de 32px par 32px (la taille dépend de votre tileset, mais celui-ci a été dessiné pour des casses de 32*32).
 
-.. image:: img/tilesetGridUncorrectSize.png
-
-Pour régler ce problème, il faut changer la taille des `tiles`, les changeant de ``16px`` à ``32px``,
-à la fois dans le ``TileMapLayer`` **[1]** et dans le ``TileSet`` **[2]**
-
-.. image:: img/tilesetTilesSizeChange.png
 
 Maintenant que vous avez créé votre tileset, vous pouvez aller dans l'onglet **TileMap**, pour "peindre" le monde.
 Pour cela, il suffit de cliquer sur le bloc que vous voulez placer, et "peindre" votre monde dans l'éditeur.
