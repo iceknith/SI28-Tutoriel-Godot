@@ -5,7 +5,7 @@ Dans cette partie du tutoriel, nous allons créer un joueur, lui ajouter des ani
 À la fin de cette section, vous devriez avoir tout ça:
 
 
-.. image:: img/playerDemo.gif
+.. image:: img/old_img/playerDemo.gif
 
 .. _init-joueur:
 
@@ -20,7 +20,7 @@ Vous pouvez créer un dossier ``scenes`` dans votre projet, et y enregistrer la 
 
 À droite du ``CharacterBody2D``, vous devriez appercevoir une icône de warning. Si vous placez votre souris dessus, vous verrez le message suivant:
 
-.. image:: img/characterbody2dwarning.png
+.. image:: img/old_img/characterbody2dwarning.png
 
 .. warning::
    *  *"Ce nœud n'a pas de forme, il ne peut donc pas entrer en collision ou interagir avec d'autres objets.
@@ -34,7 +34,7 @@ Après avoir ajouté la CollisionShape2D, vous devriez avoir un autre warning di
 Pour ajouter une shape, cliquez sur le nœud CollisionShape2D. Vous verrez alors que l'inspecteur, à droite de l'écran, affiche des informations sur la CollisionShape2D.
 Ajoutez une ``CapsuleShape2D`` dans l'attribut ``shape``, qui est normalement vide. Vous devriez voir un espèce de Tic Tac™ bleu au milieu de votre écran, c'est la shape que vous venez d'ajouter:
 
-.. image:: img/collisionshape.png
+.. image:: img/old_img/collisionshape.png
 
 
 Vous pouvez changer sa taille avec les petits cercles oranges, mais on fera ça un tout petit peu plus tard.
@@ -57,7 +57,7 @@ Si le nœud est mal placé dans l'arborescence, vous pouvez le drag-n-drop (rest
 
 Vous pouvez aussi renommer le nœud du joueur en ``"Player"``. Après ça, vous devriez avoir une arborescence comme ça:
 
-.. image:: img/playerscene.png
+.. image:: img/old_img/playerscene.png
 
 Encore un warning! Cette fois-ci sur l'``AnimatedSprite2D``. Ajoutez donc un ``SpriteFrames``, comme le recommande le warning.
 
@@ -68,7 +68,7 @@ Encore un warning! Cette fois-ci sur l'``AnimatedSprite2D``. Ajoutez donc un ``S
 Après avoir ajouté un nouveau SpriteFrames, une nouvelle fenêtre devrait apparaître en bas de votre écran.
 Si ce n'est pas le cas, cliquez sur le ``SpriteFrames`` que vous venez de créer dans l'inspecteur.
 
-.. image:: img/spriteframesopened.png
+.. image:: img/old_img/spriteframesopened.png
 
 Cette fenêtre est l'éditeur d'animations. Vous pouvez la fermer et la réouvrir en cliquant sur *SpriteFrames* en bas de l'écran.
 À gauche, vous trouverez une liste de toutes les animations disponibles. Pour l'instant, il n'y en a qu'une, elle s'appelle ``"default"``.
@@ -79,7 +79,7 @@ Renommez-la ``"idle"``.
    Généralement, elle représente le personnage qui respire, qui regarde un peu atour de lui, pour ajouter du mouvement à l'image et pour faire vivre le jeu.
    Dans certains jeux, si vous attendez suffisamment longtemps, des animations spéciales vont se jouer: le personnage qui se gratte la tête, qui s'assied par terre ou s'endort...
 
-Cliquez ensuite sur l'icône de grille: *Add frames from sprite sheet*, et ouvrez le fichier ``assets/player.png``.
+Cliquez ensuite sur l'icône de grille: *Add frames from sprite sheet*, et ouvrez le fichier ``assets/player/player.png``.
 
 .. note::
    Une spritesheet est un fichier image qui contient toutes les frame d'animation d'un objet.
@@ -87,7 +87,7 @@ Cliquez ensuite sur l'icône de grille: *Add frames from sprite sheet*, et ouvre
 
 Cela vous ouvrira le *Spritesheet Cutter*, qui ressemblera à ça:
 
-.. image:: img/spritesheetCutter.png
+.. image:: img/new_img/spritesheetCutter.png
 
 La spritesheet forme une grille où chaque frame de l'animation se trouve dans une case.
 Vous pouvez alors mettre le nombre de frames par colonne **[1]** et le nombre de frames par ligne **[2]**. Pour nous, on a 6 colonnes et 8 lignes.
@@ -96,7 +96,7 @@ Une fois les frames alignées avec la grille **[3]**, vous pouvez séléctionner
 Finalement, vous pouvez appuyer sur *Add 6 Frames* en bas, pour ajouter les frames à votre animation d'idle.
 Vous devriez voir les frames sélectionnées apparaître dans l'éditeur en bas:
 
-.. image:: img/spriteframesIdle.png
+.. image:: img/new_img/spriteframesIdle.png
 
 Maintenant, vous pouvez jouer l'animation, en appuyant sur **play** **[1]**,
 et changer la vitesse de l'animation, en changeant ses **FPS** (Frames Per Second / Images par seconde) **[2]**.
@@ -117,7 +117,7 @@ Et finalement, vous pouvez ajuster la hitbox crée :ref:`précédemment <init-jo
    Les nœuds qui sont **en dessous** dans l'arborescence apparaîtront **au dessus** dans l'éditeur (car ils sont créés après, et sont donc rendus au dessus).
    Vous pouvez ensuite remettre la ``CollisionShape2D`` à sa place. Ce n'est pas très important, car elle ne sera pas visible une fois le jeu lancé.
 
-.. image:: img/playerspriteandcollision.png
+.. image:: img/new_img/playerspriteandcollision.png
 
 .. note::
    Il est généralement préférable d'avoir une hitbox légèrement plus petite que le visuel du personnage.
@@ -142,7 +142,7 @@ et en cliquant sur **l'icône en forme de parchemin**: `Attach a new or existing
 
 Ce pop-up s'ouvrira alors:
 
-.. image:: img/createplayerscript.png
+.. image:: img/old_img/createplayerscript.png
 
 Il vous faudra:
 
@@ -151,7 +151,7 @@ Il vous faudra:
 
 Validez, et votre éditeur changera en mode **Script** pour ouvrir le fichier créé:
 
-.. image:: img/playerEmptyScript.png
+.. image:: img/old_img/playerEmptyScript.png
 
 Initiation au GDScript
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -254,7 +254,7 @@ Pour celà, nous pouvons utiliser le code suivant:
 
    func _physics_process(delta):
        var directionX:int = Input.get_axis("ui_left", "ui_right")
-       velocity.x = directionX * 300
+       velocity.x = directionX * 200
        move_and_slide()
 
 Ce code est dans la fonction ``_physics_process`` et s'exécutera donc à chaque update du moteur physique.
@@ -274,41 +274,33 @@ qui va automatiquement faire bouger le joueur, et gérer ses collisions.
 
 Pour tester ce code, vous pouvez appuyer sur ``F6`` (ou sur ``fn+F6``) pour faire tourner la scène actuelle.
 
-.. hint:: Exercice:
-   Maintenant que vous savez faire bouger le joueur sur l'axe X, essayez (sans regarder la suite) de le faire bouger
-   sur l'axe Y.
-   Indice: les inputs pour le haut et le bas sont respectivement ``"ui_up"`` et ``"ui_down"``
 
+Implémantation du saut
+~~~~~~~~~~~~~~~~~~~~~~
 
-Une fois que nous avons fait les mouvements sur une axe, il est simple de les transposer sur l'autre axe:
+Bon, c'est bien, mais dans un platformer, il faut que notre joueur:
+1. Tombe
+2. Puisse sauter lorsqu'il est sur le sol
 
-.. code-block:: gdscript
+Pour faire tomber le joueur, on peut juste le faire accélerer vers le bas à chaque update du moteur physique.
+Pour celà, on peut rajouter cette ligne au ``_physics_process``:
 
-   func _physics_process(delta):
-       var directionX:int = Input.get_axis("ui_left", "ui_right")
-       var directionY:int = Input.get_axis("ui_up", "ui_down")
-       velocity.x = directionX * 300
-       velocity.y = directionY * 300
-       move_and_slide()
+.. code-block:: GDScript
 
-Mais pour simplifier notre code, nous n'allons pas utiliser une autre variable pour l'axe Y.
-À la place, nous allons créer une variable ``direction`` qui sera un ``Vector2``, qui aura comme abscisse la valeur de
-``directionX`` et comme ordonnée, celle de ``directionY``.
-Voici le nouveau code, pour un mouvement dans les deux axes:
+    func _physics_process(delta):
+        ...
+        velocity.y += delta * 100
 
-.. code-block:: gdscript
+Et pour le faire sauter, il faut détécter lorsque le joueur est *sur le sol* et qu'il *appuie sur espace*.
+Pour celà, on utilisera une condition, donc un bloc ``if``. Et lorsque ce bloc est vrai, on mets la velocité y à la valeur de notre saut (75 dans notre cas).
 
-   @export var speed:float = 300
+.. code-block:: GDScript
 
-   func _physics_process(delta):
-       var direction:Vector2 = Vector2(Input.get_axis("ui_left", "ui_right"), Input.get_axis("ui_up", "ui_down"))
-       velocity = direction * speed
-       move_and_slide()
+    func _physics_process(delta):
+        ...
+        if Input.is_action_just_pressed("ui_accept") and is_on_ground():
+            velocity.y = -75
 
-Ce code fonctionne exactement de la même manière que le code précédent, mais à l'exception du précédent,
-celui-ci n'a pas besoin d'assigner individuellement les valeurs de ``velocity.x`` et ``velocity.y``,
-on assigne directement ``velocity``.
-De plus, dans ce code, on va mettre la vitesse maximale dans une variable, ``speed``.
 
 .. _anims-fin:
 
@@ -386,7 +378,7 @@ Le code pour faire cela est:
 
 .. _move-fin:
 
-Peaufinage des mouvements
+Bonnus - Peaufinage des mouvements
 -------------------------
 
 Actuellement, nous avons un système de mouvement qui fonctionne,
@@ -397,7 +389,7 @@ Ajustement des mouvements en diagonales
 
 Le premier problème, c'est que notre joueur se déplace plus vite quand il va en diagonale, que lorsqu'il va en ligne doite:
 
-.. image:: img/movementnorm.png
+.. image:: img/old_img/movementnorm.png
 
 On voit ici que le vecteur bleu (en diagonale) a une norme plus grande que les vecteurs rouge et vert (qui sont unitaire, c'est-à-dire que leur norme vaut 1).
 Ainsi, lorsque le personnage se déplace en diagonale, il va plus vite:
@@ -432,7 +424,7 @@ Elle va retourner la prochaine valeur que notre variable doit prendre,
 pour avoir une transition douce entre la valeur initiale et notre valeur maximale.
 Le poids va nous permettre de déterminer la "douceur" de la transition:
 
-.. image:: img/graphLerp.png
+.. image:: img/old_img/graphLerp.png
 
 Dans notre cas, le poids représentera l'accélération.
 Or, on veut qu'elle dépende du temps qui s'est écoulé,
