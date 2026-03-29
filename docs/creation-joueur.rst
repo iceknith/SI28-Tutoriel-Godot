@@ -275,7 +275,7 @@ qui va automatiquement faire bouger le joueur, et gérer ses collisions.
 Pour tester ce code, vous pouvez appuyer sur ``F6`` (ou sur ``fn+F6``) pour faire tourner la scène actuelle.
 
 
-Implémantation du saut
+Implémentation du saut
 ~~~~~~~~~~~~~~~~~~~~~~
 
 Bon, c'est bien, mais dans un platformer, il faut que notre joueur:
