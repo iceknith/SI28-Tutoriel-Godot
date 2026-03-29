@@ -24,16 +24,16 @@ Vous allez voir une fenêtre qui ressemble à ça. Ne vous inquiétez pas, même
 Les paramètres de résolutions se situent dans l'onglet ``Window``.
 
 
-.. image:: changerResolution1.png
+.. image:: img/changerResolution1.png
 
 Dans l'onglet window modifier le viewport width à 480, le wiewport height à 270 (on aura donc une résolution 480 par 270 !) et e Mode à ``Fullscreen`` pour que le jeu s'ouvre automatiquement en pleine écran.
 
-.. image:: changerResolution2.png
+.. image:: img/changerResolution2.png
 
 La dernière petite option qu'on va modifier c'est le stretch mode qui va permettre à notre petit jeu de résolution 480 par 270 de recouvrir tout l'écran.
 Pour trouver le Stretch Mode, il suffit de descendre un peu plus bas dans l'onglet Window dans la partie ``Strech `` où on peut voir une option ``Mode``. On va choisir l'option ``Viewport``.
 
-.. image:: changerResolution3.png
+.. image:: img/changerResolution3.png
 
 Maintenant qu'on a mis en place tout cela, on peut quitter les paramètres du projet et 
 Pour ce faire, on va commencer par créer une nouvelle scène qui sera notre `Monde`.
