@@ -153,7 +153,3 @@ Vous pouvez rester appuyé et glisser la souris pour aller plus rapidement.
 
 
 A présent si nous relançons la scène, le joueur ne tombe plus dans le vide infini ! 
-[temp]
-
-- Ajout des murs
-- Ajout du joueur dans ce monde
