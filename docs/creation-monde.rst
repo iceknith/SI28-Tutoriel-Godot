@@ -4,7 +4,15 @@ Création du monde
 Initialisation du monde
 -----------------------
 
-Actuellement, on a un joueur, mais on n'a pas le monde dans lequel ce joueur doit se déplacer.
+Actuellement, on a un joueur, mais on n'a pas le monde dans lequel ce joueur doit se déplacer. Nous allons essayer dans le cadre de ce tutoriel de créer un monde qui ressemble à ça : 
+
+.. image::img/ObjectifWorld.png
+
+Dans le cadre de ce tutoriel nous travaillons avec des sprites (des dessins) qui sont de tailles 16 par 16. Cependant la résolution par défaut de godot (1152 par 648) est beaucoup trop grande pour ce type de sprite.
+Dans la résolution par défaut de Godot, notre joueur ferait cette taille : 
+
+.. image::img/contreExempleResolution.png
+
 Pour ce faire, on va commencer par créer une nouvelle scène qui sera notre `Monde`.
 Cliquez sur **Scene -> New Scene** en haut à droite, ou sur le petit **+** en haut à côté de l'onglet de la scène ``player``, ou appuyez sur ``Ctrl+N``.
 Une nouvelle scène vierge devrait s'ouvir:
@@ -14,8 +22,10 @@ Une nouvelle scène vierge devrait s'ouvir:
 .. hint:: Si vous êtes restés dans l'éditeur de code, vous pouvez revenir à l'éditeur 2D,
   en cliquant sur le bouton ``2D``, en haut de la fenêtre.
 
-Ici, nous allons créer un ``Node2D``, pour ça, appuyez sur ``2D Scene`` dans la hiérarchie (en haut à gauche).
-Vous pouvez renommer ce noeud en ``"World"``, et lui ajouter un nœud ``TileMapLayer`` en enfant.
+Ici, nous allons créer un ``Control Node``, c'est un type de Node qui permet de gérer la disposition de ses enfants sur l'écran. Pour ça, appuyez à nouveau sur le **+** et rechercher la node ``Control`` ou plus directement sur le boutton  ``User Interface`` dans la hiérarchie (en haut à gauche).
+Vous pouvez renommer ce noeud en ``"World"``, et lui ajouter deux noeuds ``TextureRect`` en enfant.
+
+Pour chacun d'entre eux, vous allez cliquer en haut 
 
 .. warning::
   Depuis la version 4.3 de Godot, le nœud ``TileMap``, qui était jusque là utilisé, n'est plus d'actualité!
