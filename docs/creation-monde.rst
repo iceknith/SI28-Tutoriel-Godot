@@ -28,7 +28,7 @@ Pour ce faire, on va commencer par créer une nouvelle scène qui sera notre `Mo
 Cliquez sur **Scene -> New Scene** en haut à droite, ou sur le petit **+** en haut à côté de l'onglet de la scène ``player``, ou appuyez sur ``Ctrl+N``.
 Une nouvelle scène vierge devrait s'ouvir:
 
-.. image:: img/worldCreation.png
+.. image:: img/WorldCreation.png
 
 .. hint:: Si vous êtes restés dans l'éditeur de code, vous pouvez revenir à l'éditeur 2D,
   en cliquant sur le bouton ``2D``, en haut de la fenêtre.
