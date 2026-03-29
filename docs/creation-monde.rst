@@ -17,7 +17,7 @@ Dans la résolution par défaut de Godot, notre joueur ferait cette taille :
 
 Pour changer la résolution dans Godot, il suffit d'aller la modifier dans les paramètres du projet. Vous pouvez donc cliquez en haut à gauche sur ``Project`` puis sur projet settings.
 
-..image::img/ProjectSettings.png
+.. image::img/ProjectSettings.png
 
 Vous allez voir une fenêtre qui ressemble à ça. Ne vous inquiétez pas, même s'il semble il y avoir beaucoup de choses, nous n'allons quasiment touché à rien.
 Les paramètres de résolutions se situent dans l'onglet ``Window``.
