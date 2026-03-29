@@ -2,10 +2,6 @@ Création du Joueur
 ==================
 
 Dans cette partie du tutoriel, nous allons créer un joueur, lui ajouter des animations, et des mouvements basiques.
-À la fin de cette section, vous devriez avoir tout ça:
-
-
-.. image:: img/old_img/playerDemo.gif
 
 .. _init-joueur:
 
@@ -384,30 +380,21 @@ Bonnus - Peaufinage des mouvements
 Actuellement, nous avons un système de mouvement qui fonctionne,
 mais qui est assez rudimentaire, nous allons donc l'améliorer!
 
-Ajustement des mouvements en diagonales
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Ajout de variables
+~~~~~~~~~~~~~~~~~
 
-Le premier problème, c'est que notre joueur se déplace plus vite quand il va en diagonale, que lorsqu'il va en ligne doite:
+Jusqu'à présent, pour simplifier le tutoriel, on a "hard-codé" pas mal de variables (la vitesse, la gravité, la force de saut, etc...)
+Pour changer ça, on peut remplacer tout ces "magic numbers" (nombres qui sont écrits dans le code sans justification), par des variables, tel que:
 
-.. image:: img/old_img/movementnorm.png
+... code-block:: GDScript
+    
+    @export var speed:float = 200
+    @export var gravity:float = 100
+    @export var jump_force:float = -75
 
-On voit ici que le vecteur bleu (en diagonale) a une norme plus grande que les vecteurs rouge et vert (qui sont unitaire, c'est-à-dire que leur norme vaut 1).
-Ainsi, lorsque le personnage se déplace en diagonale, il va plus vite:
+Et d'ensuite les remplacer dans le code.
+Ça as non seulement l'avantage de rendre votre code plus lisble, mais maintenant, il est plus simple de tester différentes valeurs pour ces variables.
 
-.. math::
-   N_{rouge} = \left\| \begin{pmatrix} 1 & 0 \end{pmatrix} \right\| = 1 \quad
-   N_{vert} = \left\| \begin{pmatrix} 0 & 1 \end{pmatrix} \right\| = 1 \quad
-   N_{bleu} = \left\| \begin{pmatrix} 1 & 1 \end{pmatrix} \right\| = \sqrt{2}
-
-
-Pour régler cela, il faut faire en sorte que la longueur du vecteur direction soit toujours égale à 1, on appelle ça normaliser un vecteur.
-Pour cela, il existe la méthode ``.normalized()`` qui renvoie le vecteur normalisé.
-
-Vous pouvez donc la rajouter à la fin de la définition de ``direction``:
-
-.. code-block:: gdscript
-
-   var direction:Vector2 = Vector2(Input.get_axis("ui_left", "ui_right"), Input.get_axis("ui_up", "ui_down")).normalized()
 
 Ajout d'inertie
 ~~~~~~~~~~~~~~~
@@ -441,7 +428,7 @@ Et changer la ligne qui assignait une valeur à ``velocity`` dans ``_physics_pro
 
 .. code-block:: gdscript
 
-   velocity = lerp(velocity, direction * speed, acceleration * delta)
+   velocity.x = lerp(velocity.x, direction * speed, acceleration * delta)
 
 
 Et avec ça, nous avons fini la création de notre joueur, ainsi que de son système de mouvement !
