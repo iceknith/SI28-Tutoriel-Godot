@@ -1,9 +1,12 @@
-Template for the Read the Docs tutorial
-=======================================
+=================================
+Tutoriel Godot: Votre premier jeu
+=================================
 
-This GitHub template includes fictional Python library
-with some basic Sphinx docs.
+Bonjour jeune Arcadien.ne, n'as-tu pas toujours rêvé de faire des jeux vidéo qualitatifs rapidement ?
+Si c’est le cas, n’attends plus, car c’est exactement ce que propose Godot !!!
 
-Read the tutorial here:
+Dans ce court tutoriel, tu apprendra à utiliser Godot, tout en faisant un petit jeu 2D:
 
-https://docs.readthedocs.io/en/stable/tutorial/
+.. image:: img/preview.gif
+   :alt:
+
