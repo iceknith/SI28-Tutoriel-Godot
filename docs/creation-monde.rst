@@ -6,34 +6,34 @@ Initialisation du monde
 
 Actuellement, on a un joueur, mais on n'a pas le monde dans lequel ce joueur doit se déplacer. Nous allons essayer dans le cadre de ce tutoriel de créer un monde qui ressemble à ça : 
 
-.. image::img/ObjectifWorld.png
+.. image:: img/ObjectifWorld.png
 
 Dans le cadre de ce tutoriel nous travaillons avec des sprites (des dessins) qui sont de tailles 16 par 16. Cependant la résolution par défaut de godot (1152 par 648) est beaucoup trop grande pour ce type de sprite.
 Dans la résolution par défaut de Godot, notre joueur ferait cette taille : 
 
-.. image::img/contreExempleResolution.png
+.. image:: img/contreExempleResolution.png
 
 
 **Ce que vous conviendrait est un peu petit*.
 
 Pour changer la résolution dans Godot, il suffit d'aller la modifier dans les paramètres du projet. Vous pouvez donc cliquez en haut à gauche sur ``Project`` puis sur projet settings.
 
-.. image::img/ProjectSettings.png
+.. image:: img/ProjectSettings.png
 
 Vous allez voir une fenêtre qui ressemble à ça. Ne vous inquiétez pas, même s'il semble il y avoir beaucoup de choses, nous n'allons quasiment touché à rien.
 Les paramètres de résolutions se situent dans l'onglet ``Window``.
 
 
-.. image::changerResolution1.png
+.. image:: changerResolution1.png
 
 Dans l'onglet window modifier le viewport width à 480, le wiewport height à 270 (on aura donc une résolution 480 par 270 !) et e Mode à ``Fullscreen`` pour que le jeu s'ouvre automatiquement en pleine écran.
 
-.. image::changerResolution2.png
+.. image:: changerResolution2.png
 
 La dernière petite option qu'on va modifier c'est le stretch mode qui va permettre à notre petit jeu de résolution 480 par 270 de recouvrir tout l'écran.
 Pour trouver le Stretch Mode, il suffit de descendre un peu plus bas dans l'onglet Window dans la partie ``Strech `` où on peut voir une option ``Mode``. On va choisir l'option ``Viewport``.
 
-.. image::changerResolution3.png
+.. image:: changerResolution3.png
 
 Maintenant qu'on a mis en place tout cela, on peut quitter les paramètres du projet et 
 Pour ce faire, on va commencer par créer une nouvelle scène qui sera notre `Monde`.
