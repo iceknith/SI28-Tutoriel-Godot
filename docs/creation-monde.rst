@@ -22,7 +22,6 @@ Pour changer la résolution dans Godot, il suffit d'aller la modifier dans les p
 Vous allez voir une fenêtre qui ressemble à ça. Ne vous inquiétez pas, même s'il semble il y avoir beaucoup de choses, nous n'allons quasiment touché à rien.
 Les paramètres de résolutions se situent dans l'onglet ``Window``.
 
-..image:img/
 
 
 Pour ce faire, on va commencer par créer une nouvelle scène qui sera notre `Monde`.
