@@ -19,7 +19,5 @@ Contents
    Découverte de Godot <decouverte-godot>
    Création du Joueur <creation-joueur>
    Création du monde <creation-monde>
-   Création de la tour <creation-tour>
-   Création des ennemis <creation-ennemis>
 
 Pour démarrer l'aventure, cliques sur le bouton `Suivant` en bas à droite de cette page!
