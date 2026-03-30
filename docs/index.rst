@@ -10,8 +10,8 @@ Contents
 
    Accueil <self>
    Découverte de Godot <decouverte-godot>
-   Création du Joueur <creation-joueur>
    Création du monde <creation-monde>
+   Création du Joueur <creation-joueur>
    Pour aller plus loin <aller-plus-loin>
 
 Pour démarrer l'aventure, cliques sur le bouton `Suivant` en bas à droite de cette page!

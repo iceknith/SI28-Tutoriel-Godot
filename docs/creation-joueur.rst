@@ -1,7 +1,7 @@
 Création du Joueur
 ==================
 
-
+On a un monde, mais pas de joueur pour le traverser !
 Dans cette partie du tutoriel, nous allons créer un joueur, lui ajouter des animations, et des mouvements basiques.
 
 .. _init-joueur:

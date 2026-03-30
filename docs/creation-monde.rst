@@ -4,7 +4,7 @@ Création du monde
 Initialisation du monde
 -----------------------
 
-Actuellement, on a un joueur, mais on n'a pas le monde dans lequel ce joueur doit se déplacer. Nous allons essayer dans le cadre de ce tutoriel de créer un monde qui ressemble à ça : 
+Nous allons essayer de créer un monde qui ressemble à ça : 
 
 .. image:: img/ObjectifWorld.png
 
