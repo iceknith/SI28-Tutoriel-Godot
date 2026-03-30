@@ -26,12 +26,12 @@ Les paramètres de résolutions se situent dans l'onglet ``Window``.
 
 .. image:: img/changerResolution1.png
 
-Dans l'onglet window modifier le viewport width à 480, le wiewport height à 270 (on aura donc une résolution 480 par 270 !) et le Mode à ``Fullscreen`` pour que le jeu s'ouvre automatiquement en pleine écran.
+Dans l'onglet window modifier le viewport width à 480, le viewport height à 270 (on aura donc une résolution 480 par 270 !) et le Mode à ``Fullscreen`` pour que le jeu s'ouvre automatiquement en pleine écran.
 
 .. image:: img/changerResolution2.png
 
 La dernière petite option qu'on va modifier c'est le stretch mode qui va permettre à notre petit jeu de résolution 480 par 270 de recouvrir tout l'écran.
-Pour trouver le Stretch Mode, il suffit de descendre un peu plus bas dans l'onglet Window dans la partie ``Strech `` où on peut voir une option ``Mode``. On va choisir l'option ``Viewport``.
+Pour trouver le Stretch Mode, il suffit de descendre un peu plus bas dans l'onglet Window dans la partie ``Strech `` où on peut voir une option `Mode`. On va choisir l'option ``Viewport``.
 
 .. image:: img/changerResolution3.png
 
@@ -40,11 +40,21 @@ Pour ce faire, on va commencer par créer une nouvelle scène qui sera notre `Mo
 
 .. image:: img/WorldCreation.png
 
-.. hint:: Si vous êtes restés dans l'éditeur de code, vous pouvez revenir à l'éditeur 2D,
-  en cliquant sur le bouton ``2D``, en haut de la fenêtre.
+
 
 Ici, nous allons créer un ``Control Node``, c'est un type de Node qui permet de gérer l'agencement de ses enfants. Pour ça, appuyez à nouveau sur le **+** et rechercher la node ``Control`` ou plus directement  appuyez sur le boutton  ``User Interface`` dans la hiérarchie (à gauche).
-Vous pouvez renommer ce noeud en ``"World"``, et lui ajouter deux noeuds ``TextureRect`` en enfant. Les ``TextureRect`` vont servir à créer le fond.
+Vous pouvez d'ores et déjà renommer ce noeud en ``"World"``.
+
+Avant de faire quoi que ce soit apprenons d'abord apprendre à lancer une scène et à définir une scène principale. Commencez par appuyer sur ``F5``. Cela va vous afficher une petite pop-up qui ressemble à ça : 
+
+.. image:: setupMainScene.png
+
+Cliquez sur ``Select Current `` ce qui va vous permettre de définir cette scène comme la scène principale ! A présent à chaque fois que nous appuyerons sur ``F5``, Godot lancera cette scène. Nous aurions pu aussi appuyer sur ``F6`` pour lancer la scène courante (qui dans notre cas aurait donné le même résultat) ou encore utiliser les bouttons en haut à droite indiqués sur l'image.
+
+Malheureusement pour l'instant notre scène ne contient rien. Simplement un néant gris un peu moche ! Mais ne vous inquiétez pas nous allons bientot là remplir.
+
+
+Commençons par ajouter deux noeuds ``TextureRect`` en tant qu'enfant du ``Control Node``. Les ``TextureRect`` vont ici servir à créer le fond.
 
 Vous pouvez cliquer sur chacun d'entre eux pour afficher leur propriété dans l'inspecteur à gauche. Nous allons ajouter dans leur propriété ``Texture`` les images disponibles dans Backround, respectivement ``back.png`` and ``middle.png``. 
 Vous pouvez les ``load`` en cliquant sur la petite flèche à côté de la propriété texture ou bien directement les glisser depuis les dossiers en bas à gauche.
@@ -55,23 +65,22 @@ C'est bien beau tout ça mais sauf qu'après avoir load les deux textures, notre
 
 .. image:: img/incorrectWorld.png
 
-
 Ce qui ne correspond pas à ce que l'on veut. Heureusement, on peut faciliment régler ça ! Premier point, l'océan ne couvre pas tout l'écran, on peut arranger ça en cliquant sur le ``TextureRect`` qui a la texture d'océan et en changeant son anchor mode à Full Rect (on lui dit de prendre toute la place disponible sur l'écran).
 
 .. image:: img/anchorFullRect.png
 
-Ensuite nous aimerions que le feuillage soit en bas de l'écran et recouvre toute la longueur, nous pouvons donc utilisons l'anchor ``bottom wide `` correspondant.
+Ensuite nous aimerions que le feuillage soit en bas de l'écran et recouvre toute la longueur, nous pouvons donc utilisons l'anchor ``bottom wide`` correspondant.
 
 .. image:: img/bottomWide.png 
 
 Néanmoins nous voyons bien que la texture ne réagit pas comme nous le désirons et qu'elle reste trop large. Et même si nous essayons de la resize verticalement manuellement avec la souris, la texture refuse de coopérer.
-C'est ainsi car par défaut l'expand mode des textures dans godot (c'est à dire comment elles s'élargissent, et comment leur taille est gérée) est défini à `keep_size`. Avec cette option il n'est pas possible de donner à une texture, une largeur ou longueur inférieure à celle de base.
+C'est ainsi car par défaut l'expand mode (c'est à dire comment leur taille est gérée) des textures dans godot  est défini à `keep_size`. Avec cette option il n'est pas possible de donner à une texture, une largeur ou longueur inférieure à celle de base.
 Heureusement, nous pouvons facilement changer ça en changeant l'expand mode à `Ignore Size` ce qui vous permet de redimensionner la texture avec la souris.
 
 
 .. image:: img/expandMode.png
 
-A présent nous pouvons resize comme nous désirons la texture. Lorsque nous l'élargissons la texture, nous constatons tout de même qu'elle devient distordue (ça reste une grosse texture) . Nous aimerions plutôt essayer de recréer une sorte de patterne comme sur la photo originale avec les feuillages en fond. Pour ça, nous pourrions copier-coller, et resize les textures une par une  mais en réalité il existe une solution bien plus facile et bien plus élégante sur Godot.
+A présent nous pouvons resize la texture comme nous le désirons. Cependant, lorsque nous l'élargissons la texture, nous constatons tout de même qu'elle devient distordue. Nous aimerions plutôt essayer de recréer une sorte de patterne comme sur la photo originale avec les feuillages en fond. Pour ça, nous pourrions copier-coller, et resize les textures une par une  mais en réalité il existe une solution bien plus facile et bien plus élégante sur Godot.
 
 Il suffit de changer le stretch Mode de la texture à Tile à la place de Scale. Ceci va indiquer à godot que notre Texture fait partie d'un motif et qu'on souhaite qu'elle soit répétée lorsqu'on l'aggrandit.
 
@@ -129,25 +138,4 @@ On peut désormer ajouter notre joueur à notre scène à l'aide du boutton en h
 .. image:: img/addPlayerToScene.png
 
 
-On peut lancer la scène et voir que notre joueur... tombe dans le vide sans opportunité de retour.
-C'est parfaitement normal ! Nous avons ajouté le visuel maintenant, il nous faut ajouter la physique. Et ce sera extrêmement simple !
 
-
-Pour cela, sous l’onglet Physics layers du TileSet, cliquez sur le bouton Add Element. Cela va ajouter un nouveau Physics layer.
-
-.. image:: img/PhysicsLayer.png 
-
-L'onglet ``Paint`` est utilisé pour ajouter des propriétés aux tiles que l’on utilise. 
-Ici, on va donc ajouter la propriété d’appartenance au ``Physics Layer 0``, afin d’avoir une collision.
-
-Après avoir sélectionné la propriété, cliquez sur toutes les tiles juste à droite. 
-En cliquant sur une tile, vous appliquez la propriété ``Physics Layer 0`` dessus (d’où le nom de l’onglet ``Paint``).
-
-Les tiles devraient devenir bleues, ce qui signifie que vous venez de leur ajouter une hitbox.
-
-Vous pouvez rester appuyé et glisser la souris pour aller plus rapidement.
-
-.. image:: img/paintPhysics.png
-
-
-A présent si nous relançons la scène, le joueur ne tombe plus dans le vide infini ! 
