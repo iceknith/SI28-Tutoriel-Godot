@@ -42,11 +42,21 @@ Une nouvelle scène vierge devrait s'ouvir:
 
 .. image:: img/WorldCreation.png
 
-.. hint:: Si vous êtes restés dans l'éditeur de code, vous pouvez revenir à l'éditeur 2D,
-  en cliquant sur le bouton ``2D``, en haut de la fenêtre.
+
 
 Ici, nous allons créer un ``Control Node``, c'est un type de Node qui permet de gérer l'agencement de ses enfants. Pour ça, appuyez à nouveau sur le **+** et rechercher la node ``Control`` ou plus directement  appuyez sur le boutton  ``User Interface`` dans la hiérarchie (à gauche).
-Vous pouvez renommer ce noeud en ``"World"``, et lui ajouter deux noeuds ``TextureRect`` en enfant. Les ``TextureRect`` vont servir à créer le fond.
+Vous pouvez d'ores et déjà renommer ce noeud en ``"World"``.
+
+Avant de faire quoi que ce soit apprenons d'abord apprendre à lancer une scène et à définir une scène principale. Commencez par appuyer sur ``F5``. Cela va vous afficher une petite pop-up qui ressemble à ça : 
+
+.. image:: setupMainScene.png
+
+Cliquez sur ``Select Current `` ce qui va vous permettre de définir cette scène comme la scène principale ! A présent à chaque fois que nous appuyerons sur ``F5``, Godot lancera cette scène. Nous aurions pu aussi appuyer sur ``F6`` pour lancer la scène courante (qui dans notre cas aurait donné le même résultat) ou encore utiliser les bouttons en haut à droite indiqués sur l'image.
+
+Malheureusement pour l'instant notre scène ne contient rien. Simplement un néant gris un peu moche ! Mais ne vous inquiétez pas nous allons bientot là remplir.
+
+
+Commençons par ajouter deux noeuds ``TextureRect`` en tant qu'enfant du ``Control Node``. Les ``TextureRect`` vont ici servir à créer le fond.
 
 Vous pouvez cliquer sur chacun d'entre eux pour afficher leur propriété dans l'inspecteur à gauche. Nous allons ajouter dans leur propriété ``Texture`` les images disponibles dans Backround, respectivement ``back.png`` and ``middle.png``. 
 Vous pouvez les ``load`` en cliquant sur la petite flèche à côté de la propriété texture ou bien directement les glisser depuis les dossiers en bas à gauche.
@@ -56,7 +66,6 @@ Vous pouvez les ``load`` en cliquant sur la petite flèche à côté de la propr
 C'est bien beau tout ça mais sauf qu'après avoir load les deux textures, notre scène ressemble à ça : 
 
 .. image:: img/incorrectWorld.png
-
 
 Ce qui ne correspond pas à ce que l'on veut. Heureusement, on peut faciliment régler ça ! Premier point, l'océan ne couvre pas tout l'écran, on peut arranger ça en cliquant sur le ``TextureRect`` qui a la texture d'océan et en changeant son anchor mode à Full Rect (on lui dit de prendre toute la place disponible sur l'écran).
 
@@ -73,7 +82,7 @@ Heureusement, nous pouvons facilement changer ça en changeant l'expand mode à 
 
 .. image:: img/expandMode.png
 
-A présent nous pouvons resize la texture comme nous le désirons . Cependant, lorsque nous l'élargissons la texture, nous constatons tout de même qu'elle devient distordue. Nous aimerions plutôt essayer de recréer une sorte de patterne comme sur la photo originale avec les feuillages en fond. Pour ça, nous pourrions copier-coller, et resize les textures une par une  mais en réalité il existe une solution bien plus facile et bien plus élégante sur Godot.
+A présent nous pouvons resize la texture comme nous le désirons. Cependant, lorsque nous l'élargissons la texture, nous constatons tout de même qu'elle devient distordue. Nous aimerions plutôt essayer de recréer une sorte de patterne comme sur la photo originale avec les feuillages en fond. Pour ça, nous pourrions copier-coller, et resize les textures une par une  mais en réalité il existe une solution bien plus facile et bien plus élégante sur Godot.
 
 Il suffit de changer le stretch Mode de la texture à Tile à la place de Scale. Ceci va indiquer à godot que notre Texture fait partie d'un motif et qu'on souhaite qu'elle soit répétée lorsqu'on l'aggrandit.
 

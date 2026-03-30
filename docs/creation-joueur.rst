@@ -304,7 +304,7 @@ Pour celà, on utilisera une condition, donc un bloc ``if``. Et lorsque ce bloc 
 
 
 
-Ajout du joueur au monde : 
+Ajout du joueur au monde 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
