@@ -1,5 +1,5 @@
 Animation du personage
-----------------------
+======================
 
 Actuellement, notre personage bouge, mais il reste toujours statiquement dans la même frame de la même animation.
 Il est temps de changer ça !
