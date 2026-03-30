@@ -22,7 +22,7 @@ Installation de Godot
 Pour commencer le tutoriel, il vous faudra installer Godot. Pour cela, vous pouvez aller sur `ce site <https://godotengine.org/download/>`_ , pour y télécharger la dernière version de Godot.
 
 .. note::
-   Ce tutoriel a été écrit pour Godot 4.3. Ça ne devrait pas changer grand chose pour les futures versions, mais si vous voyez un problème, faites-le nous savoir!
+   Ce tutoriel a été écrit pour Godot 4.6. Ça ne devrait pas changer grand chose pour les futures versions, mais si vous voyez un problème, faites-le nous savoir!
 
 Une fois le fichier .zip téléchargé et dézippé, vous pouvez lancer l’installeur, et après un peu d’attente, vous pourrez lancer Godot, et être accueilli par cette fenêtre:
 
@@ -42,7 +42,7 @@ Actuellement, le **Project Manager** est vide, donc créons notre premier projet
    Vous pouvez changer la langue de l'éditeur dans les **Paramètres** en haut à droite du **Project Manager**, ou dans **Editor Settings** dans l'éditeur.
 
 Cliquer sur le bouton **Create** en haut à gauche pour créer un nouveau projet.
-Un popup s’ouvrira, en vous demandant des informations sur votre projet. Nommez votre projet ``"Tuto Arcadia"`` **[1]**, et choisissez le fichier dans lequel vous voulez qu’il soit stocké **[2]**.
+Un popup s’ouvrira, en vous demandant des informations sur votre projet. Nommez votre projet ``"Tutoriel SI28"`` **[1]**, et choisissez le fichier dans lequel vous voulez qu’il soit stocké **[2]**.
 
 .. image:: img/old_img/newproject.png
 

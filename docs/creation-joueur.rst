@@ -10,7 +10,7 @@ Initialisation du Joueur
 ------------------------
 
 Pour commencer, nous allons créer un ``CharacterBody2D``. C'est un nœud 2D, qui est utilisé pour créer des personnages qui peuvent se déplacer.
-En haut à gauche, dans l'arborescence des scènes, créez une nouvelle scène en cliquant sur le bouton **Other Node** ou le bouton **+**. Ajoutez un ``CharacterBody2D``.
+En haut à gauche, de la fenêtre principale de l'éditeur, créez une nouvelle scène en cliquant sur le bouton **+**, ou en appuyant sur ``Ctrl + N``. Celà créera un nouvel onglet, dans laquelle nous pourrons créer notre joueur. Pour celà, ajoutez un ``CharacterBody2D`` en cliquant sur le bouton ``Other Node`` dans l'arborescence, ou en appuyant sur ``Ctrl + A``.
 Le noeud CharacterBody2D devrait apparaître dans l'arborescence, et l'éditeur devrait être passé en mode 2D.
 Avant toute chose, sauvegardez votre nouvelle scène en appuyant sur ``Ctrl+S``.
 Vous pouvez créer un dossier ``scenes`` dans votre projet, et y enregistrer la scène du joueur en l'appellant ``player.tscn``.

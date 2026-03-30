@@ -37,8 +37,6 @@ Pour trouver le Stretch Mode, il suffit de descendre un peu plus bas dans l'ongl
 
 Maintenant qu'on a mis en place tout cela, on peut quitter les paramètres du projet et revenir à la création de notre monde !
 Pour ce faire, on va commencer par créer une nouvelle scène qui sera notre `Monde`.
-Cliquez sur **Scene -> New Scene** en haut à droite, ou sur le petit **+** en haut à côté de l'onglet de la scène ``player``, ou appuyez sur ``Ctrl+N``.
-Une nouvelle scène vierge devrait s'ouvir:
 
 .. image:: img/WorldCreation.png
 
