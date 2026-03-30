@@ -1,12 +1,5 @@
 .. include:: ../README.rst
 
-.. .. image:: img/preview.gif
-..    :alt:
-
-.. note::
-
-   Ce tutoriel est en plein développement. Il ne couvre que jusqu'à la création du joueur.
-
 Voici un petit sommaire de ce que ce tutoriel propose:
 
 Contents
@@ -17,7 +10,8 @@ Contents
 
    Accueil <self>
    Découverte de Godot <decouverte-godot>
-   Création du Joueur <creation-joueur>
    Création du monde <creation-monde>
+   Création du Joueur <creation-joueur>
+   Pour aller plus loin <aller-plus-loin>
 
 Pour démarrer l'aventure, cliques sur le bouton `Suivant` en bas à droite de cette page!

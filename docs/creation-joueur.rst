@@ -1,6 +1,7 @@
 Création du Joueur
 ==================
 
+On a un monde, mais pas de joueur pour le traverser !
 Dans cette partie du tutoriel, nous allons créer un joueur, lui ajouter des animations, et des mouvements basiques.
 
 .. _init-joueur:
@@ -334,7 +335,7 @@ Vous pouvez alors ajouter ce bout de code à la fin de ``_physics_process``:
 
     func _physics_process(delta):
         # ...
-        if direction == Vector2.ZERO:
+        if direction == 0:
             $AnimatedSprite2D.animation = "idle"
         else:
             $AnimatedSprite2D.animation = "run"
@@ -386,7 +387,7 @@ Ajout de variables
 Jusqu'à présent, pour simplifier le tutoriel, on a "hard-codé" pas mal de variables (la vitesse, la gravité, la force de saut, etc...)
 Pour changer ça, on peut remplacer tout ces "magic numbers" (nombres qui sont écrits dans le code sans justification), par des variables, tel que:
 
-... code-block:: GDScript
+.. code-block:: GDScript
     
     @export var speed:float = 200
     @export var gravity:float = 100
