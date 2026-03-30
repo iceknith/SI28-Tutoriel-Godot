@@ -73,13 +73,13 @@ Le code pour faire cela est:
 .. _move-fin:
 
 Bonnus - Peaufinage des mouvements
--------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Actuellement, nous avons un système de mouvement qui fonctionne,
 mais qui est assez rudimentaire, nous allons donc l'améliorer!
 
 Ajout de variables
-~~~~~~~~~~~~~~~~~
+------------------
 
 Jusqu'à présent, pour simplifier le tutoriel, on a "hard-codé" pas mal de variables (la vitesse, la gravité, la force de saut, etc...)
 Pour changer ça, on peut remplacer tout ces "magic numbers" (nombres qui sont écrits dans le code sans justification), par des variables, tel que:
@@ -95,7 +95,7 @@ Et d'ensuite les remplacer dans le code.
 
 
 Ajout d'inertie
-~~~~~~~~~~~~~~~
+----------
 
 Actuellement, notre joueur atteint sa vitesse maximale instantanément, et s'arrête instantanément.
 Pour remédier à ce problème, nous allons utiliser une fonction, appelée ``lerp``, qui s'utilise de cette façon:
