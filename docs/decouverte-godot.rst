@@ -26,7 +26,7 @@ Pour commencer le tutoriel, il vous faudra installer Godot. Pour cela, vous pouv
 
 Une fois le fichier .zip téléchargé et dézippé, vous pouvez lancer l’installeur, et après un peu d’attente, vous pourrez lancer Godot, et être accueilli par cette fenêtre:
 
-.. image:: img/projectmanager.png
+.. image:: img/old_img/projectmanager.png
 
 
 Création de votre premier projet
@@ -44,7 +44,7 @@ Actuellement, le **Project Manager** est vide, donc créons notre premier projet
 Cliquer sur le bouton **Create** en haut à gauche pour créer un nouveau projet.
 Un popup s’ouvrira, en vous demandant des informations sur votre projet. Nommez votre projet ``"Tuto Arcadia"`` **[1]**, et choisissez le fichier dans lequel vous voulez qu’il soit stocké **[2]**.
 
-.. image:: img/newproject.png
+.. image:: img/old_img/newproject.png
 
 Laissez les autres paramètres comme ils sont pour l'instant, et créez votre projet. Une nouvelle fenêtre devrait se lancer.
 C'est la fenêtre principale de Godot, l'éditeur, celle où vous aller tout faire sur vos jeux.
@@ -54,7 +54,7 @@ L'éditeur
 
 Dans cette sous-partie, nous allons décrire les différents éléments qui composent l'éditeur:
 
-.. image:: img/fulleditor.png
+.. image:: img/old_img/fulleditor.png
 
 1. Au milieu, vous trouverez la fenêtre principale de l'éditeur, celle-ci vous permettera de visionner et de modifier les différentes scènes de votre projet.
 
@@ -97,9 +97,9 @@ Après avoir créé le projet, il nous faut installer les différents `assets` q
 .. note::
    Un `asset` est le nom donné aux éléments d'un jeu vidéo (généralement non-code). Par exemple, une texture, un son, une font (police d'écriture), sont des assets (respectivement visuel, sonore, et re-visuel).
 
-Pour cela, téléchargez le fichier :download:`ici <ressources/Godot-Cours-Arcadia---Tower-Protector--- Assets.zip>`, extrayez le fichier ``assets`` et mettez-le dans le dossier de votre projet.
+Pour cela, téléchargez le fichier :download:`ici <https://cloud.utc.fr/s/EpXt8S58C7QXy8H>`, extrayez le fichier ``assets`` et mettez-le dans le dossier de votre projet.
 Votre dossier de projet devrait contenir au moins les éléments suivants:
 
-.. image:: img/filesAsset.png
+.. image:: img/old_img/filesAsset.png
 
 Une fois cette étape terminée, nous pouvons commencer à créer notre premier jeu! Cliquez sur le bouton *Suivant* pour continuer ce tutoriel!
