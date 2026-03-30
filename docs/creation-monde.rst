@@ -131,25 +131,4 @@ On peut désormer ajouter notre joueur à notre scène à l'aide du boutton en h
 .. image:: img/addPlayerToScene.png
 
 
-On peut lancer la scène et voir que notre joueur... tombe dans le vide sans opportunité de retour.
-C'est parfaitement normal ! Nous avons ajouté le visuel maintenant, il nous faut ajouter la physique. Et ce sera extrêmement simple !
 
-
-Pour cela, sous l’onglet Physics layers du TileSet, cliquez sur le bouton Add Element. Cela va ajouter un nouveau Physics layer.
-
-.. image:: img/PhysicsLayer.png 
-
-L'onglet ``Paint`` est utilisé pour ajouter des propriétés aux tiles que l’on utilise. 
-Ici, on va donc ajouter la propriété d’appartenance au ``Physics Layer 0``, afin d’avoir une collision.
-
-Après avoir sélectionné la propriété, cliquez sur toutes les tiles juste à droite. 
-En cliquant sur une tile, vous appliquez la propriété ``Physics Layer 0`` dessus (d’où le nom de l’onglet ``Paint``).
-
-Les tiles devraient devenir bleues, ce qui signifie que vous venez de leur ajouter une hitbox.
-
-Vous pouvez rester appuyé et glisser la souris pour aller plus rapidement.
-
-.. image:: img/paintPhysics.png
-
-
-A présent si nous relançons la scène, le joueur ne tombe plus dans le vide infini ! 

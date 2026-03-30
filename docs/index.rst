@@ -12,6 +12,9 @@ Contents
    Découverte de Godot <decouverte-godot>
    Création du monde <creation-monde>
    Création du Joueur <creation-joueur>
+   Physique du monde <collision-monde>
+   Animation du joueur <animation-joueur>
    Pour aller plus loin <aller-plus-loin>
+
 
 Pour démarrer l'aventure, cliques sur le bouton `Suivant` en bas à droite de cette page!
