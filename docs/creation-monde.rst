@@ -47,7 +47,7 @@ Vous pouvez d'ores et déjà renommer ce noeud en ``"World"``.
 
 Avant de faire quoi que ce soit apprenons d'abord apprendre à lancer une scène et à définir une scène principale. Commencez par appuyer sur ``F5``. Cela va vous afficher une petite pop-up qui ressemble à ça : 
 
-.. image:: setupMainScene.png
+.. image:: img/setupMainScene.png
 
 Cliquez sur ``Select Current `` ce qui va vous permettre de définir cette scène comme la scène principale ! A présent à chaque fois que nous appuyerons sur ``F5``, Godot lancera cette scène. Nous aurions pu aussi appuyer sur ``F6`` pour lancer la scène courante (qui dans notre cas aurait donné le même résultat) ou encore utiliser les bouttons en haut à droite indiqués sur l'image.
 
